@@ -1,5 +1,5 @@
-title:            Blog Title
-description:      Describe your website here.
+title:            邵洪泉的博客
+description:      Stay hungry Stay Foolish.
 # put your disqus here
 disqus_shortname: 
 reading_time:     true # if true, shows the estimated reading time for a post
@@ -7,8 +7,7 @@ words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-
-url: http://aronbordin.com/neo-hpstr-jekyll-theme
+url: http://121.42.167.78/server/
 
 # draw your top menu here
 # each item must have a title and a url.
@@ -16,25 +15,19 @@ url: http://aronbordin.com/neo-hpstr-jekyll-theme
 #   To create sub categories. add a submenu item
 # See the example
 menu:
-  - title: 'Home'
-    url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
-  - title: 'Install'
-    url: '/theme-setup/'
-  - title: 'Tags'
-    url: '/tags'
-  - title: 'Categories'
-    url: '/categories'
-    type: 'categories'
-  - title: 'Favorites'
+  - title: '主页'
     url: '#'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
-
+  - title: '脚本'
+    url: '#'
+  - title: '前端'
+    url: '/theme-setup/'
+  - title: '数据库'
+    url: '/tags'
+  - title: '其他'
+    url: '/categories' 
+  - title: '随笔'
+    url: '/intro/code-highlighting-post/'
+     
 # Owner/author information
 owner:
   name:           Your name
@@ -69,8 +62,8 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
-locale:      en_US
+timezone:    Asiz/Shanghai
+locale:      zh_CN
 future:      true
 highlighter: rouge
 markdown:    kramdown
