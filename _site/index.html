@@ -321,14 +321,14 @@
   </header>
   <div class="entry-content">
     
-      <p>Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.</p>
+      <p>Here be a sample post with a custom background image. To utilize this &quot;feature&quot; just add the following YAML to a post&#39;s front matter.</p>
 
 <figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
   <span class="s">background</span><span class="pi">:</span> <span class="s">filename.png</span></code></pre></figure>
 
 <p>This little bit of YAML makes the assumption that your background image asset is in the <code>/images</code> folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</p>
 
-<p>If you want to set a background image for the entire site just add <code>background: filename.png</code> to your <code>_config.yml</code> and BOOM — background images on every page!</p>
+<p>If you want to set a background image for the entire site just add <code>background: filename.png</code> to your <code>_config.yml</code> and BOOM --- background images on every page!</p>
 
 <div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
 
@@ -355,9 +355,9 @@
   </header>
   <div class="entry-content">
     
-      <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+      <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<a href="http://en.wikipedia.org/wiki/Syntax_highlighting">^1</a></p>
 
-<h3 id="rouge-code-blocks">Rouge Code Blocks</h3>
+<h3>Rouge Code Blocks</h3>
 
 <p>To modify styling and highlight colors edit <code>/_sass/_rouge.scss</code>.</p>
 
@@ -394,9 +394,8 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
-<h3 id="standard-code-block">Standard Code Block</h3>
-
-<pre><code>&lt;nav class="pagination" role="navigation"&gt;
+<h3>Standard Code Block</h3>
+<div class="highlight"><pre><code class="language-" data-lang="">&lt;nav class="pagination" role="navigation"&gt;
     {% if page.previous %}
         &lt;a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"&gt;Previous article&lt;/a&gt;
     {% endif %}
@@ -404,16 +403,7 @@
         &lt;a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}"&gt;Next article&lt;/a&gt;
     {% endif %}
 &lt;/nav&gt;&lt;!-- /.pagination --&gt;
-</code></pre>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
+</code></pre></div>
     
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -437,7 +427,7 @@
   </header>
   <div class="entry-content">
     
-      <p>This theme supports <strong>link posts</strong>, made famous by John Gruber. To use, just add <code>link: http://url-you-want-linked</code> to the post’s YAML front matter and you’re done.</p>
+      <p>This theme supports <strong>link posts</strong>, made famous by John Gruber. To use, just add <code>link: http://url-you-want-linked</code> to the post&#39;s YAML front matter and you&#39;re done.</p>
 
     
   </div><!-- /.entry-content -->

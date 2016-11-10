@@ -54,7 +54,7 @@ timezone:    Asia/ShangHai
 locale:      zh_CN
 future:      true
 highlighter: rouge
-markdown:    kramdown
+markdown:    redcarpet
 gems:
   - jekyll-sitemap
 sass:
