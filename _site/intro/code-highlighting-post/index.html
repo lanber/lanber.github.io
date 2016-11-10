@@ -18,7 +18,7 @@
 <meta property="og:description" content="Demo post displaying the various ways of highlighting code in Markdown.">
 <meta property="og:url" content="/blog/intro/code-highlighting-post/">
 <meta property="og:site_name" content="Blog">
-<meta property="og:image" content="/blog/images//images/logo.png">
+<meta property="og:image" content="/blog/images/images/logo.png">
 
 
 
@@ -75,7 +75,7 @@
       <li class="header-item-title">
         <a href="/blog/">
           
-            <img class="logo" src="/blog//images/logo.png" alt="Blog">
+            <img class="logo" src="/blog/images/logo.png" alt="Blog">
           
           <a href="/blog/" class="title"> Blog</a>
         </a>
@@ -234,9 +234,9 @@
     <div class="entry-content">
         
       <h1 class="post-title entry-title">Syntax Highlighting Post</h1>
-      <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<a href="http://en.wikipedia.org/wiki/Syntax_highlighting">^1</a></p>
+      <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
 
-<h3>Rouge Code Blocks</h3>
+<h3 id="rouge-code-blocks">Rouge Code Blocks</h3>
 
 <p>To modify styling and highlight colors edit <code>/_sass/_rouge.scss</code>.</p>
 
@@ -273,8 +273,9 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
-<h3>Standard Code Block</h3>
-<div class="highlight"><pre><code class="language-" data-lang="">&lt;nav class="pagination" role="navigation"&gt;
+<h3 id="standard-code-block">Standard Code Block</h3>
+
+<pre><code>&lt;nav class="pagination" role="navigation"&gt;
     {% if page.previous %}
         &lt;a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"&gt;Previous article&lt;/a&gt;
     {% endif %}
@@ -282,7 +283,16 @@
         &lt;a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}"&gt;Next article&lt;/a&gt;
     {% endif %}
 &lt;/nav&gt;&lt;!-- /.pagination --&gt;
-</code></pre></div>
+</code></pre>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
       <footer class="entry-meta">
         <span class="entry-tags"><a href="/blog/tags#sample post" title="Pages tagged sample post" class="tag"><span class="term">sample post</span></a><a href="/blog/tags#code" title="Pages tagged code" class="tag"><span class="term">code</span></a><a href="/blog/tags#highlighting" title="Pages tagged highlighting" class="tag"><span class="term">highlighting</span></a></span>
         <span>Updated on <span class="entry-date date updated"><time datetime="2014-12-23">December 23, 2014</time></span></span>
