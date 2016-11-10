@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">Blog</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="/feed.xml" />
-<link rel="alternate" type="text/html" href="" />
-<updated>2016-11-10T07:32:02+00:00</updated>
-<id>/</id>
+<link rel="self" type="application/atom+xml" href="/blog/feed.xml" />
+<link rel="alternate" type="text/html" href="/blog" />
+<updated>2016-11-10T07:38:13+00:00</updated>
+<id>/blog/</id>
 <author>
   <name>Lanber</name>
-  <uri>/</uri>
+  <uri>/blog/</uri>
   <email>y1ou@email.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Sample Post with Feature Image]]></title>
- <link rel="alternate" type="text/html" href="/feature-image/" />
-  <id>/feature-image</id>
+ <link rel="alternate" type="text/html" href="/blog/feature-image/" />
+  <id>/blog/feature-image</id>
   <published>2013-10-28T00:00:00+00:00</published>
   <updated>2013-10-28T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -40,20 +40,20 @@
 
 &lt;p&gt;Post content after &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt; tag.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/feature-image/&quot;&gt;Sample Post with Feature Image&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on October 28, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/feature-image/&quot;&gt;Sample Post with Feature Image&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on October 28, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Dark Post]]></title>
- <link rel="alternate" type="text/html" href="/dark-post/" />
-  <id>/dark-post</id>
+ <link rel="alternate" type="text/html" href="/blog/dark-post/" />
+  <id>/blog/dark-post</id>
   <published>2013-10-28T00:00:00+00:00</published>
   <updated>2013-10-28T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -63,20 +63,20 @@
 
 &lt;p&gt;on your post. This theme adds a dark background with a white panel to show your content.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/dark-post/&quot;&gt;Dark Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on October 28, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/dark-post/&quot;&gt;Dark Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on October 28, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Post with a Background Image]]></title>
- <link rel="alternate" type="text/html" href="/image/background-image/" />
-  <id>/image/background-image</id>
+ <link rel="alternate" type="text/html" href="/blog/image/background-image/" />
+  <id>/blog/image/background-image</id>
   <published>2013-10-26T00:00:00+00:00</published>
   <updated>2013-10-26T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -91,21 +91,21 @@
 
 &lt;div xmlns:cc=&quot;http://creativecommons.org/ns#&quot; xmlns:dct=&quot;http://purl.org/dc/terms/&quot; about=&quot;http://subtlepatterns.com&quot; class=&quot;notice&quot;&gt;Background images from &lt;span property=&quot;dct:title&quot;&gt;Subtle Patterns&lt;/span&gt; (&lt;a rel=&quot;cc:attributionURL&quot; property=&quot;cc:attributionName&quot; href=&quot;http://subtlepatterns.com&quot;&gt;Subtle Patterns&lt;/a&gt;) / &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/3.0/&quot;&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/image/background-image/&quot;&gt;Post with a Background Image&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on October 26, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/image/background-image/&quot;&gt;Post with a Background Image&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on October 26, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Syntax Highlighting Post]]></title>
- <link rel="alternate" type="text/html" href="/intro/code-highlighting-post/" />
-  <id>/intro/code-highlighting-post</id>
+ <link rel="alternate" type="text/html" href="/blog/intro/code-highlighting-post/" />
+  <id>/blog/intro/code-highlighting-post</id>
   <updated>2014-12-23T00:00:00-00:00</updated>
   <published>2013-08-16T00:00:00+00:00</published>
   
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -158,7 +158,7 @@
     {% endif %}
 &amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-    &lt;p&gt;&lt;a href=&quot;/intro/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on August 16, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/intro/code-highlighting-post/&quot;&gt;Syntax Highlighting Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on August 16, 2013.&lt;/p&gt;
   </content>
 </entry>
 
@@ -166,31 +166,31 @@
 <entry>
   <title type="html"><![CDATA[Sample Link Post]]></title>
  <link rel="alternate" type="text/html" href="http://mademistakes.com" />
-  <id>/intro/sample-link-post</id>
+  <id>/blog/intro/sample-link-post</id>
   <published>2013-08-12T00:00:00+00:00</published>
   <updated>2013-08-12T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
     &lt;p&gt;This theme supports &lt;strong&gt;link posts&lt;/strong&gt;, made famous by John Gruber. To use, just add &lt;code&gt;link: http://url-you-want-linked&lt;/code&gt; to the post&amp;#39;s YAML front matter and you&amp;#39;re done.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/intro/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on August 12, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/intro/sample-link-post/&quot;&gt;Sample Link Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on August 12, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[A Post with a Video]]></title>
- <link rel="alternate" type="text/html" href="/intro/video-post/" />
-  <id>/intro/video-post</id>
+ <link rel="alternate" type="text/html" href="/blog/intro/video-post/" />
+  <id>/blog/intro/video-post</id>
   <published>2013-06-25T00:00:00+00:00</published>
   <updated>2013-06-25T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -206,21 +206,21 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;560&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;315&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;allowfullscreen&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
 {:/nomarkdown}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/intro/video-post/&quot;&gt;A Post with a Video&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on June 25, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/intro/video-post/&quot;&gt;A Post with a Video&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on June 25, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Post with Large Feature Image and Text]]></title>
- <link rel="alternate" type="text/html" href="/intro/readability-feature-post/" />
-  <id>/intro/readability-feature-post</id>
+ <link rel="alternate" type="text/html" href="/blog/intro/readability-feature-post/" />
+  <id>/blog/intro/readability-feature-post</id>
   <updated>2013-06-30T00:00:00-00:00</updated>
   <published>2013-05-23T00:00:00+00:00</published>
   
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -267,20 +267,20 @@
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/intro/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on May 23, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/intro/readability-feature-post/&quot;&gt;Post with Large Feature Image and Text&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on May 23, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[A Post with Images]]></title>
- <link rel="alternate" type="text/html" href="/sample/intro/sample-post-images/" />
-  <id>/sample/intro/sample-post-images</id>
+ <link rel="alternate" type="text/html" href="/blog/sample/intro/sample-post-images/" />
+  <id>/blog/sample/intro/sample-post-images</id>
   <published>2013-05-22T00:00:00+00:00</published>
   <updated>2013-05-22T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -389,20 +389,20 @@ It will look something like this:
     &lt;figcaption&gt;Test images&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/sample/intro/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on May 22, 2013.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/sample/intro/sample-post-images/&quot;&gt;A Post with Images&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on May 22, 2013.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Testing Readability with a Bunch of Text]]></title>
- <link rel="alternate" type="text/html" href="/intro/readability-post/" />
-  <id>/intro/readability-post</id>
+ <link rel="alternate" type="text/html" href="/blog/intro/readability-post/" />
+  <id>/blog/intro/readability-post</id>
   <published>2012-05-22T00:00:00+00:00</published>
   <updated>2012-05-22T00:00:00+00:00</updated>
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -447,21 +447,21 @@ It will look something like this:
 
 &lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/intro/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on May 22, 2012.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/intro/readability-post/&quot;&gt;Testing Readability with a Bunch of Text&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on May 22, 2012.&lt;/p&gt;
   </content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Sample Post]]></title>
- <link rel="alternate" type="text/html" href="/intro/sample-post/" />
-  <id>/intro/sample-post</id>
+ <link rel="alternate" type="text/html" href="/blog/intro/sample-post/" />
+  <id>/blog/intro/sample-post</id>
   <updated>2014-12-24T00:00:00-00:00</updated>
   <published>2011-03-10T00:00:00+00:00</published>
   
   <author>
     <name>Lanber</name>
-    <uri></uri>
+    <uri>/blog</uri>
     <email>y1ou@email.com</email>
   </author>
   <content type="html">
@@ -483,7 +483,7 @@ It will look something like this:
 
 &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot;&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot;&gt;
 {: .image-right}&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;. &lt;u&gt;Underline&lt;/u&gt;. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
@@ -563,7 +563,7 @@ It will look something like this:
 
 &lt;div markdown=&quot;0&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot;&gt;Info Button&lt;/a&gt;&lt;/div&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/intro/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;&quot;&gt;Blog&lt;/a&gt; on March 10, 2011.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/blog/intro/sample-post/&quot;&gt;Sample Post&lt;/a&gt; was originally published by Lanber at &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt; on March 10, 2011.&lt;/p&gt;
   </content>
 </entry>
 
