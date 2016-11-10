@@ -345,10 +345,10 @@
 <div>
   <pre><code class="html">&lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&gt;
     {% if page.previous %}
-        &lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&gt;Previous article&lt;/a&gt;
+        &lt;a href=&quot;{{ site.baseurl }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&gt;Previous article&lt;/a&gt;
     {% endif %}
     {% if page.next %}
-        &lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&gt;Next article&lt;/a&gt;
+        &lt;a href=&quot;{{ site.baseurl }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&gt;Next article&lt;/a&gt;
     {% endif %}
 &lt;/nav&gt;&lt;!-- /.pagination --&gt;</code></pre>
 </div>
@@ -377,10 +377,10 @@ end</code></pre>
 
 <pre><code>&lt;nav class="pagination" role="navigation"&gt;
     {% if page.previous %}
-        &lt;a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"&gt;Previous article&lt;/a&gt;
+        &lt;a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"&gt;Previous article&lt;/a&gt;
     {% endif %}
     {% if page.next %}
-        &lt;a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}"&gt;Next article&lt;/a&gt;
+        &lt;a href="{{ site.baseurl }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}"&gt;Next article&lt;/a&gt;
     {% endif %}
 &lt;/nav&gt;&lt;!-- /.pagination --&gt;
 </code></pre>

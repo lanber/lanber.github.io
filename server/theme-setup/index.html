@@ -390,7 +390,7 @@ bundle exec jekyll serve</code></pre>
 
 <h2 id="customization">Customization</h2>
 
-<p>Most of the variables found here are used in the .html files found in <code>_includes</code> if you need to add or remove anything. A good place to start would be to add the <code>title</code>, <code>description</code>, and <code>url</code> for your site. Links are absolute and prefixed with <code>{{ site.url }}</code> in the various <code>_includes</code> and <code>_layouts</code>, so remember to properly set <code>url</code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> to <code>http://localhost:4000</code> when developing locally.</p>
+<p>Most of the variables found here are used in the .html files found in <code>_includes</code> if you need to add or remove anything. A good place to start would be to add the <code>title</code>, <code>description</code>, and <code>url</code> for your site. Links are absolute and prefixed with <code>{{ site.baseurl }}</code> in the various <code>_includes</code> and <code>_layouts</code>, so remember to properly set <code>url</code><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> to <code>http://localhost:4000</code> when developing locally.</p>
 
 <h3 id="disqus-comments">Disqus Comments</h3>
 

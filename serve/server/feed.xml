@@ -132,10 +132,10 @@
 &lt;div&gt;
   &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;nav class=&amp;quot;pagination&amp;quot; role=&amp;quot;navigation&amp;quot;&amp;gt;
     {% if page.previous %}
-        &amp;lt;a href=&amp;quot;{{ site.url }}{{ page.previous.url }}&amp;quot; class=&amp;quot;btn&amp;quot; title=&amp;quot;{{ page.previous.title }}&amp;quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
+        &amp;lt;a href=&amp;quot;{{ site.baseurl }}{{ page.previous.url }}&amp;quot; class=&amp;quot;btn&amp;quot; title=&amp;quot;{{ page.previous.title }}&amp;quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
     {% endif %}
     {% if page.next %}
-        &amp;lt;a href=&amp;quot;{{ site.url }}{{ page.next.url }}&amp;quot; class=&amp;quot;btn&amp;quot; title=&amp;quot;{{ page.next.title }}&amp;quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
+        &amp;lt;a href=&amp;quot;{{ site.baseurl }}{{ page.next.url }}&amp;quot; class=&amp;quot;btn&amp;quot; title=&amp;quot;{{ page.next.title }}&amp;quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
     {% endif %}
 &amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -164,10 +164,10 @@ end&lt;/code&gt;&lt;/pre&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&amp;gt;
     {% if page.previous %}
-        &amp;lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
+        &amp;lt;a href=&quot;{{ site.baseurl }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
     {% endif %}
     {% if page.next %}
-        &amp;lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
+        &amp;lt;a href=&quot;{{ site.baseurl }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
     {% endif %}
 &amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
