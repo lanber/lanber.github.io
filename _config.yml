@@ -4,7 +4,7 @@ description:      good blog
 disqus_shortname: 
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
-logo:             /images/logo.png # logo visible in the topbar
+logo:             images/logo.png # logo visible in the topbar
 url: /blog
 #top menu
 menu:
@@ -54,7 +54,7 @@ timezone:    Asia/ShangHai
 locale:      zh_CN
 future:      true
 highlighter: rouge
-markdown:    Redcarpet
+markdown:    kramdown
 gems:
   - jekyll-sitemap
 sass:
