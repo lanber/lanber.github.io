@@ -25,10 +25,3 @@ var_dump($bool);
 }
 get(true);//将显示int(1)
 {% endhighlight %}
-*严格模式
-在文件顶部添加：
-{% highlight %}
-declare(strict_types=1);
-{% endhighlight %}
-在此模式下，若参数与所声明类型不符合，则会触发致命错误。
-
