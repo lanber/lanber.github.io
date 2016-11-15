@@ -28,9 +28,9 @@ owner:
   github: Lanber
 
 # Social networking links used in author block underneath posts. Update and remove as you like.
-social:
-  - title: "github"
-    url: "https://github.com/lanber"
+# social:
+#   - title: "github"
+#     url: "https://github.com/lanber"
 # Background image to be tiled on all pages
 background:
 # Analytics and webmaster tools stuff goes here
