@@ -15,19 +15,7 @@ menu:
   - title: '随笔'
     url: '/'
   - title: '关于我'
-    url: '/'
-  #- title: 'Tags'
-  #  url: '/tags'
-  #- title: 'Categories'
-  #   url: '/categories'
-  #   type: 'categories'
-  # - title: 'Favorites'
-  #   url: '#'
-  #   submenu:
-  #     - title: 'Code Highlighter'
-  #       url: '/intro/code-highlighting-post/'
-  #     - title: 'Sample Post'
-  #       url: '/intro/sample-post/'
+    url: '/about'
 
 # Owner/author information
 owner:
