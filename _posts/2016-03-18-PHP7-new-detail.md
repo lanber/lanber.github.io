@@ -19,7 +19,7 @@ PHP7版本相较于老版本，加了大量新特性，同时性能得到了显�
 (float), 以及布尔值 (bool)。它们扩充了PHP5中引入的其他类型：类名，接口，数组和回调类型。
 其有两种模式：强制模式和严格模式。
 *强制模式
-{% highlight %}
+{% highlight ruby %}
 function get(int $bool){
 var_dump($bool);
 }
