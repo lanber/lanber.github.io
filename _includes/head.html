@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>{% if page.title and page.title != 1 %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
@@ -50,3 +50,20 @@
 {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.baseurl }}/images/{{ background }}{% endcapture %}{% endunless %}
 <style type="text/css">body {background-image:url({{ background }});}</style>
 {% endif %}
+
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		{% if page.title == 'Welcome!' %}
+			var flag = 3;
+			$("#header").remove();
+			$("#main").css("margin-top",'100px');
+		{% else %}
+			var flag = 250;
+		{% endif%}
+		$(window).scroll(function(){
+			var a=$(".header-menu"),b=$(window).scrollTop();
+			b>flag?a.attr("class","header-menu header-menu-overflow"):a.attr("class","header-menu header-menu-top");
+		})
+	})
+</script>
