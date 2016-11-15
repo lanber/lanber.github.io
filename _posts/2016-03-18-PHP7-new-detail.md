@@ -16,15 +16,3 @@ categories: [intro]
 ##1、标量类型声明
 	现在可以使用下列类型参数（无论用强制模式还是严格模式）：字符串(string),整数 (int), 浮点数 (float), 以及布尔值 (bool)。它们扩充了PHP5中引入的其他类型：类名，接口，数组和回调类型。其有两种模式：强制模式和严格模式。
 	*强制模式
-	{% highlight %}
-	function get(int $bool){
-		var_dump($bool);
-	}
-	get(true);//将显示int(1)
-	{% endhighlight %}
-	*严格模式
-	在文件顶部添加：
-	{% highlight %}
-	declare(strict_types=1);
-	{% endhighlight %}
-	在此模式下，若参数与所声明类型不符合，则会触发致命错误。
