@@ -252,3 +252,35 @@ int(1)
 ## 5、移除了 ASP 和 script PHP 标签
 受到影响的标签有： `<% %> 、 <%= %> 、 <script language="php"> </script>`
 
+## 6、在数值溢出的时候，内部函数将会失败
+将浮点数转换为整数的时候，如果浮点数值太大，导致无法以整数表达的情况下， 
+在之前的版本中，内部函数会直接将整数截断，并不会引发错误。 在 PHP 7.0 
+中，如果发生这种情况，会引发 E_WARNING 错误，并且返回 NULL 。
+
+## 7、JSON 扩展已经被 JSOND 取代
+JSON 扩展已经被 JSOND 扩展取代。 对于数值的处理，有以下两点需要注意的： 
+第一，数值不能以点号（ . ）结束 （例如，数值 34. 必须写作 34.0 或 34 ）。 
+第二，如果使用科学计数法表示数值， e 前面必须不是点号（ . ） （例如， 3.e3 必须写作 3.0e3
+ 或 3e3 ）。
+
+## 8、INI 文件中 # 注释格式被 ; 替换
+
+## 9 、 yield 变更为右联接运算符
+{% highlight ruby %}
+echo yield -1;
+// 在之前版本中会被解释为：
+echo (yield) - 1;
+// 现在，它将被解释为：
+echo yield (-1);
+
+yield $foo or die;
+// 在之前版本中会被解释为：
+yield ($foo or die);
+// 现在，它将被解释为：
+(yield $foo) or die;
+{% endhighlight %}
+
+## 10、$HTTP_RAW_POST_DATA 被移除，请使用 php://input 作为替代。
+参考：
+1、http://php.net/manual/en/migration70.new-features.php#migration70.new-features.return-type-declarations
+2、http://www.tuicool.com/articles/yARJRjQ
