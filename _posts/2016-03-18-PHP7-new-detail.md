@@ -6,7 +6,7 @@ modified: 2016-03-18
 tags: [php]
 categories: [intro]
 ---
-<figure>
+<figure class="center">
 	<a href="#"><img src="http://pic.chinaz.com/2016/0126/20160125165737_60612.jpg" alt=""></a>
 </figure>
 
