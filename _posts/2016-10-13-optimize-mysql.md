@@ -6,7 +6,7 @@ modified: 2016-03-18
 tags: [mysql]
 categories: [intro]
 ---
-##1、选择优化的数据类型
+##选择优化的数据类型
 
 ###更小的通常更好
 
