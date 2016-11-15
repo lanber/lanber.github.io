@@ -282,6 +282,6 @@ yield ($foo or die);
 
 ## 10、$HTTP_RAW_POST_DATA 被移除，请使用 php://input 作为替代。
 参考：
+1、http://php.net/manual/en/migration70.new-features.php#migration70.new-features.return-type-declarations
 
-[^1]: <http://php.net/manual/en/migration70.new-features.php#migration70.new-features.return-type-declarations>
-[^2]:<http://www.tuicool.com/articles/yARJRjQ>
+2、http://www.tuicool.com/articles/yARJRjQ
