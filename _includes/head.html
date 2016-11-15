@@ -50,20 +50,3 @@
 {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.baseurl }}/images/{{ background }}{% endcapture %}{% endunless %}
 <style type="text/css">body {background-image:url({{ background }});}</style>
 {% endif %}
-
-<script type="text/javascript" src="{{ site.baseurl }}/assets/js/vendor/jquery-1.9.1.min.js"></script>
-<script type="text/javascript">
-	$(function(){
-		{% if page.title == 1 %}
-			var flag = 3;
-			$("#header").remove();
-			$("#main").css("margin-top",'100px');
-		{% else %}
-			var flag = 250;
-		{% endif%}
-		$(window).scroll(function(){
-			var a=$(".header-menu"),b=$(window).scrollTop();
-			b>flag?a.attr("class","header-menu header-menu-overflow"):a.attr("class","header-menu header-menu-top");
-		})
-	})
-</script>
