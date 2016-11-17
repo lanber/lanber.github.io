@@ -10,10 +10,8 @@ baseurl: /blog
 menu:
   - title: '首页'
     url: '/'
-  - title: '文章'
-    url: '/'
-  - title: '随笔'
-    url: '/'
+  - title: '分类'
+    url: '/tags'
   - title: '关于我'
     url: '/about'
 
