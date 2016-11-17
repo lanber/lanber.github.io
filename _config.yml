@@ -11,7 +11,7 @@ menu:
   - title: '首页'
     url: '/'
   - title: '分类'
-    url: '/tags'
+    url: 'https://lanber.github.io/blog/tags/'
   - title: '关于我'
     url: '/about'
 
