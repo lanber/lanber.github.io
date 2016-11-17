@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL优化索引
+title: MySQL索引优化
 description: "MySQL索引优化方法，MySQL如何优化索引，MySQL怎么优化索引，如何对MySQL进行索引优化，MySQL优化索引方式"
 modified: 2016-10-14
 tags: [mysql]
