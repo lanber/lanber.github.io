@@ -11,14 +11,14 @@ menu:
   - title: '首页'
     url: '/'
   - title: '分类'
-    url: '/tags'
+    url: 'https://lanber.github.io/blog/tags/'
   - title: '关于我'
     url: '/about'
 
 # Owner/author information
 owner:
   name:           邵洪泉
-  # site:           https://lanber.github.io/blog/about/
+  site:           https://lanber.github.io/blog/about/
   avatar:         images/mine.jpg
   bio:            "满怀诗和远方的南漂，程序是我丈量世界的筹码，为了增加生命的宽度而不停奔跑。"
   email:          fiend2010a@gmail.com

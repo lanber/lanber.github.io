@@ -35,11 +35,7 @@
             </ul>
           </li>
         {% else %}
-            {% if menu.url contains 'http://' or menu.url contains 'https://' %}
-                <li class="header-item {{class}}"><a href="{{menu.url}}" target="_blank"><h3>{{ menu.title }}</h3></a></li>
-            {% else %}
                 <li class="header-item {{class}}"><a href="{{site.baseurl}}{{menu.url}}"><h3>{{ menu.title }}</h3></a></li>
-            {% endif %}
         {% endif %}
       {% endfor %}
     </ul>
