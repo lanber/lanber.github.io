@@ -2,7 +2,7 @@
 layout: post
 title: MySQL优化数据表
 description: "MySQL数据表优化方法，MySQL如何优化数据表，MySQL怎么优化数据表，如何对MySQL进行数据表优化，MySQL优化数据表方式"
-modified: 2016-03-18
+modified: 2016-10-13
 tags: [mysql]
 categories: [intro]
 ---
