@@ -7,7 +7,7 @@ tags: [php]
 categories: [intro]
 ---
 <figure class="center">
-	<a href="#"><img src="http://pic.chinaz.com/2016/0126/20160125165737_60612.jpg" alt=""></a>
+    <a href="#"><img src="{{ site.baseurl }}/images/php-7-1.jpg" alt=""></a>
 </figure>
 
 PHP7版本相较于老版本，加了大量新特性，同时性能得到了显著提升：是PHP5.6性能的2倍，在wordpress表
