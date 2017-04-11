@@ -5,7 +5,7 @@ disqus_shortname:
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
-baseurl: /blog
+baseurl: 
 #top menu
 menu:
   - title: '首页'
