@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2017-06-17T18:21:16+08:00</updated>
+<updated>2017-06-17T18:34:13+08:00</updated>
 <id>/</id>
 <author>
   <name>邵洪泉</name>
@@ -15,19 +15,18 @@
 
 <entry>
   <title type="html"><![CDATA[Build Blog]]></title>
- <link rel="alternate" type="text/html" href="/Build-blog/" />
-  <id>/Build-blog</id>
+ <link rel="alternate" type="text/html" href="/intro/Build-blog/" />
+  <id>/intro/Build-blog</id>
+  <updated>2017-06-17T00:00:00-00:00</updated>
   <published>2017-06-17T00:00:00+08:00</published>
-  <updated>2017-06-17T00:00:00+08:00</updated>
+  
   <author>
     <name>邵洪泉</name>
     <uri></uri>
     <email>fiend2010a@gmail.com</email>
   </author>
   <content type="html">
-    &lt;h1&gt;Build Blog&lt;/h1&gt;
-
-&lt;h2&gt;换电脑要重新搭建环境，就过程中遇到的坑做个总结&lt;/h2&gt;
+    &lt;h2&gt;换电脑要重新搭建环境，就过程中遇到的坑做个总结&lt;/h2&gt;
 
 &lt;h2&gt;&amp;gt;更新gem源&lt;/h2&gt;
 
@@ -37,6 +36,8 @@
 &lt;code&gt;ERROR:  While executing gem ... (OpenSSL::SSL::SSLError)&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;注意&lt;code&gt;http://gems.ruby-china.org/&lt;/code&gt;不是https协议&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;!-- more --&gt;
 
 &lt;h2&gt;&amp;gt;运行&lt;code&gt;jekyll -v&lt;/code&gt;&lt;/h2&gt;
 
@@ -59,7 +60,7 @@ core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (Lo
 &lt;li&gt;&lt;code&gt;bundle exec jekyll server&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/Build-blog/&quot;&gt;Build Blog&lt;/a&gt; was originally published by 邵洪泉 at &lt;a href=&quot;&quot;&gt;邵洪泉的博客&lt;/a&gt; on June 17, 2017.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/intro/Build-blog/&quot;&gt;Build Blog&lt;/a&gt; was originally published by 邵洪泉 at &lt;a href=&quot;&quot;&gt;邵洪泉的博客&lt;/a&gt; on June 17, 2017.&lt;/p&gt;
   </content>
 </entry>
 

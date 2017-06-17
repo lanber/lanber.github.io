@@ -5,18 +5,18 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>All Posts &#8211; 邵洪泉的博客</title>
-<meta name="description" content="An archive of posts.">
-
+<title>Build Blog &#8211; 邵洪泉的博客</title>
+<meta name="description" content="jekyll博客搭建">
+<meta name="keywords" content="php">
 
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="All Posts">
-<meta property="og:description" content="An archive of posts.">
-<meta property="og:url" content="/posts/">
+<meta property="og:title" content="Build Blog">
+<meta property="og:description" content="jekyll博客搭建">
+<meta property="og:url" content="/intro/Build-blog/">
 <meta property="og:site_name" content="邵洪泉的博客">
 <meta property="og:image" content="/images/images/logo.png">
 
@@ -24,7 +24,7 @@
 
 
 
-<link rel="canonical" href="/posts/">
+<link rel="canonical" href="/intro/Build-blog/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="邵洪泉的博客 Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -76,7 +76,7 @@
 
 </head>
 
-<body id="post-index">
+<body id="post" >
 
 <!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
 
@@ -125,15 +125,17 @@
 <div class="entry-header" id="header">
   <div class="header-title">
     <div class="header-title-wrap">
-      <h1>All Posts</h1>
+      <h1>Build Blog</h1>
       
-        <h2><span class="entry-date"><time>&nbsp;</time></span></h2>
+        <h2><span class="entry-date date published updated"><time datetime="2017-06-17T00:00:00+08:00">June 17, 2017</time></span></h2>
       
 
       
-          <p class="entry-reading-time">
-            &nbsp;
-          </p><!-- /.entry-reading-time -->
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~1 minute
+        </p><!-- /.entry-reading-time -->
       
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
@@ -162,79 +164,91 @@
 
 
 <div id="main" role="main">
+  <article class="hentry">
+    <div class="entry-content">
+        
+      <h1 class="post-title entry-title">Build Blog</h1>
+      <h2>换电脑要重新搭建环境，就过程中遇到的坑做个总结</h2>
+
+<h2>&gt;更新gem源</h2>
+
+<ul>
+<li><code>gem sources --add http://gems.ruby-china.org/ --remove https://rubygems.org/</code>
+### warning:
+<code>ERROR:  While executing gem ... (OpenSSL::SSL::SSLError)</code></li>
+<li>注意<code>http://gems.ruby-china.org/</code>不是https协议</li>
+</ul>
+
+<!-- more -->
+
+<h2>&gt;运行<code>jekyll -v</code></h2>
+
+<ul>
+<li>报错：</li>
+</ul>
+<div class="highlight"><pre><code class="language-" data-lang="">/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/
+core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)
+
+</code></pre></div>
+<h2>安装依赖</h2>
+
+<ul>
+<li><code>bundle install</code></li>
+</ul>
+
+<h2>启动jekyll</h2>
+
+<ul>
+<li><code>bundle exec jekyll server</code></li>
+</ul>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags#php" title="Pages tagged php" class="tag"><span class="term">php</span></a></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2017-06-17">June 17, 2017</time></span></span>
+        
+        <!-- <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div> --><!-- /.social-share -->
+
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    <div class="read-more">
   
+    <div class="read-more-header">
+      <a href="/intro/optimize-mysql-query/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/intro/optimize-mysql-query/" title="MySQL查询优化">MySQL查询优化</a></h3>
+      <p>MySQL查询优化方法，MySQL如何优化查询，MySQL怎么优化查询，如何对MySQL进行查询优化，MySQL优化查询方式 <a href="/intro/optimize-mysql-query/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
     
+      <div class="list-item">
+        <h4><a href="/intro/optimize-mysql-index/" title="MySQL索引优化">MySQL索引优化</a></h4>
+        <span>Published on October 14, 2016</span>
+      </div><!-- /.list-item -->
     
-
+      <div class="list-item">
+        <h4><a href="/intro/optimize-mysql/" title="MySQL存储优化">MySQL存储优化</a></h4>
+        <span>Published on October 13, 2016</span>
+      </div><!-- /.list-item -->
     
-    <article>
-      <h2 id="2017-ref">2017</h2>
-      <ul>
-    
-
-        <li class="entry-title"><a href="/intro/Build-blog/" title="Build Blog">Build Blog</a></li>
-
-    
-        
-          </ul>
-        </article>
-        <article>
-          <h2 id="2016-ref" class="year-heading">2016</h2>
-          <ul>
-        
-    
-
-    
-    
-
-    
-
-        <li class="entry-title"><a href="/intro/optimize-mysql-query/" title="MySQL查询优化">MySQL查询优化</a></li>
-
-    
-        
-    
-
-    
-    
-
-    
-
-        <li class="entry-title"><a href="/intro/optimize-mysql-index/" title="MySQL索引优化">MySQL索引优化</a></li>
-
-    
-        
-    
-
-    
-    
-
-    
-
-        <li class="entry-title"><a href="/intro/optimize-mysql/" title="MySQL存储优化">MySQL存储优化</a></li>
-
-    
-        
-    
-
-    
-    
-
-    
-
-        <li class="entry-title"><a href="/intro/PHP7-new-detail/" title="PHP7新特性总结">PHP7新特性总结</a></li>
-
-    
-      </ul>
-    </article>
-    
-
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
 </div><!-- /#main -->
 
 <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script type="text/javascript" src="/assets/js/scripts.min.js"></script>
 <script type="text/javascript" async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 <!-- <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
 
 
 
