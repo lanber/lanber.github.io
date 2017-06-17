@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>1 &#8211; 邵洪泉的博客</title>
+<title>Welcome! &#8211; 邵洪泉的博客</title>
 <meta name="description" content="Describe this nonsense.">
 <meta name="keywords" content="Jekyll, theme, themes, responsive, blog, modern">
 
@@ -14,7 +14,7 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1">
+<meta property="og:title" content="Welcome!">
 <meta property="og:description" content="Describe this nonsense.">
 <meta property="og:url" content="/">
 <meta property="og:site_name" content="邵洪泉的博客">
@@ -100,7 +100,7 @@
 
         
             
-                <li class="header-item "><a href="/"><h3>关于我</h3></a></li>
+                <li class="header-item "><a href="/about"><h3>关于我</h3></a></li>
             
         
       
@@ -109,16 +109,7 @@
 
         
             
-                <li class="header-item "><a href="/"><h3>随笔</h3></a></li>
-            
-        
-      
-        
-        
-
-        
-            
-                <li class="header-item "><a href="/"><h3>文章</h3></a></li>
+                <li class="header-item "><a href="https://lanber.github.io/blog/tags/"><h3>分类</h3></a></li>
             
         
       
@@ -131,13 +122,12 @@
             
         
       
-      <li class="header-item"><a href="/search"><h3><i class="fa fa-search"></i></h3></a></li>
     </ul>
   </div>
 <div class="entry-header" id="header">
   <div class="header-title">
     <div class="header-title-wrap">
-      <h1>1</h1>
+      <h1>Welcome!</h1>
       
         <h2><span class="entry-date"><time>&nbsp;</time></span></h2>
       
@@ -160,15 +150,11 @@
       
     
       
-        <li><a href="/"><h3>文章</h3></a></li>
+        <li><a href="https://lanber.github.io/blog/tags/"><h3>分类</h3></a></li>
       
     
       
-        <li><a href="/"><h3>随笔</h3></a></li>
-      
-    
-      
-        <li><a href="/"><h3>关于我</h3></a></li>
+        <li><a href="/about"><h3>关于我</h3></a></li>
       
     
   </ul>
@@ -182,14 +168,8 @@
 <article class="hentry">
   <header>
     
-      <div class="entry-image-index">
-        <a href="/test/" title="Sample Post with Feature Image"><img src="/images/feature.jpg" alt="Sample Post with Feature Image"></a>
-        <div class="image-credit">Image source: <a target="_blank" href="http://www.dargadgetz.com/ios-8-abstract-wallpaper-pack-for-iphone-5s-5c-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
-
-      </div><!-- /.entry-image -->
-    
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2016-10-11T00:00:00+00:00"><a href="/test/">October 11, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2017-06-17T00:00:00+08:00"><a href="/Build-blog/">June 17, 2017</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
       
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -199,25 +179,93 @@
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/test/" rel="bookmark" title="Sample Post with Feature Image" itemprop="url">Sample Post with Feature Image</a></h1>
+      <h1 class="entry-title"><a href="/Build-blog/" rel="bookmark" title="Build Blog" itemprop="url">Build Blog</a></h1>
     
   </header>
   <div class="entry-content">
     
-        <p>This post demonstrate how to use feature images on your posts.</p>
+      <h1>Build Blog</h1>
 
-<p>Just add:</p>
+<h2>换电脑要重新搭建环境，就过程中遇到的坑做个总结</h2>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">feature</span><span class="pi">:</span> <span class="s">filename.png</span></code></pre></figure>
+<h2>&gt;更新gem源</h2>
 
-<p>where <strong>filename.png</strong> is an image inside <code>images</code> folder. This image will be displayed on the top of your post.</p>
+<ul>
+<li><code>gem sources --add http://gems.ruby-china.org/ --remove https://rubygems.org/</code>
+### warning:
+<code>ERROR:  While executing gem ... (OpenSSL::SSL::SSLError)</code></li>
+<li>注意<code>http://gems.ruby-china.org/</code>不是https协议</li>
+</ul>
 
-<p>Warning! The image height is not limited. The image width will be adjusted to fit on the post container, make sure to not use images with a high height.</p>
+<h2>&gt;运行<code>jekyll -v</code></h2>
+
+<ul>
+<li>报错：</li>
+</ul>
+<div class="highlight"><pre><code class="language-" data-lang="">/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/
+core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)
+
+</code></pre></div>
+<h2>安装依赖</h2>
+
+<ul>
+<li><code>bundle install</code></li>
+</ul>
+
+<h2>启动jekyll</h2>
+
+<ul>
+<li><code>bundle exec jekyll server</code></li>
+</ul>
+
+    
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2016-11-26T00:00:00+08:00"><a href="/intro/optimize-mysql-query/">November 26, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+        Reading time ~1 minute
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/intro/optimize-mysql-query/" rel="bookmark" title="MySQL查询优化" itemprop="url">MySQL查询优化</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    
+        <h2>优化数据访问</h2>
+
+<h3>是否向数据库请求了不需要的数据</h3>
+
+<p>例如：</p>
+
+<p>-查询不需要的记录。（使用limit限制）</p>
+
+<p>-多表关联时返回全部列。</p>
+
+<p>-总是取出全部列。</p>
+
+<p>-重复查询相同的数据。</p>
+
+<h3>是否在扫描额外的记录</h3>
+
+<p>-响应时间包括服务时间和排队时间。</p>
+
+<p>-查看扫描的行数和返回的行数来判断查询效率。</p>
+
+<p>-根据扫描的行数和访问类型来判断查询傲率。如果查询没有办法找到合适的访问类型，通常的方法时增加一个合适的索引。</p>
 
 
         <div align="center">
-            <div markdown="0"><a href="/test/" class="btn btn-info">Continue Reading ...</a></div>
+            <div markdown="0"><a href="/intro/optimize-mysql-query/" class="btn btn-info">Continue Reading ...</a></div>
         </div>
     
   </div><!-- /.entry-content -->
@@ -226,14 +274,8 @@
 <article class="hentry">
   <header>
     
-      <div class="entry-image-index">
-        <a href="/feature-image/" title="Sample Post with Feature Image"><img src="/images/feature.jpg" alt="Sample Post with Feature Image"></a>
-        <div class="image-credit">Image source: <a target="_blank" href="http://www.dargadgetz.com/ios-8-abstract-wallpaper-pack-for-iphone-5s-5c-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
-
-      </div><!-- /.entry-image -->
-    
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-28T00:00:00+00:00"><a href="/feature-image/">October 28, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2016-10-14T00:00:00+08:00"><a href="/intro/optimize-mysql-index/">October 14, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
       
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -243,25 +285,32 @@
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/feature-image/" rel="bookmark" title="Sample Post with Feature Image" itemprop="url">Sample Post with Feature Image</a></h1>
+      <h1 class="entry-title"><a href="/intro/optimize-mysql-index/" rel="bookmark" title="MySQL索引优化" itemprop="url">MySQL索引优化</a></h1>
     
   </header>
   <div class="entry-content">
     
-        <p>This post demonstrate how to use feature images on your posts.</p>
+        <h2>一、索引的类型</h2>
 
-<p>Just add:</p>
+<h3>B-Tree索引</h3>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">feature</span><span class="pi">:</span> <span class="s">filename.png</span></code></pre></figure>
+<h4>优点：</h4>
 
-<p>where <strong>filename.png</strong> is an image inside <code>images</code> folder. This image will be displayed on the top of your post.</p>
+<p>-顺序存储，且每一个叶子页到跟的距离相同。</p>
 
-<p>Warning! The image height is not limited. The image width will be adjusted to fit on the post container, make sure to not use images with a high height.</p>
+<p>-不在需要全表扫描，取而代之的是从索引的根节点开始进行搜索，加快了访问数据的速度。</p>
+
+<h3>缺点:</h3>
+
+<p>-如果不是按照索引的最左列开始查找，则无法使用索引。</p>
+
+<p>-无法查找同时满足条件的多列。</p>
+
+<p>-如果查询中存在某列的范围查询(例如like)，则其右边所有列均无法使用索引优化查找。</p>
 
 
         <div align="center">
-            <div markdown="0"><a href="/feature-image/" class="btn btn-info">Continue Reading ...</a></div>
+            <div markdown="0"><a href="/intro/optimize-mysql-index/" class="btn btn-info">Continue Reading ...</a></div>
         </div>
     
   </div><!-- /.entry-content -->
@@ -271,7 +320,7 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-28T00:00:00+00:00"><a href="/dark-post/">October 28, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2016-10-13T00:00:00+08:00"><a href="/intro/optimize-mysql/">October 13, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
       
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
@@ -281,17 +330,33 @@
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/dark-post/" rel="bookmark" title="Dark Post" itemprop="url">Dark Post</a></h1>
+      <h1 class="entry-title"><a href="/intro/optimize-mysql/" rel="bookmark" title="MySQL存储优化" itemprop="url">MySQL存储优化</a></h1>
     
   </header>
   <div class="entry-content">
     
-      <p>This is a sample post to show the dark post theme. To use this dark theme, just add:</p>
+        <h2>选择优化的数据类型</h2>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">layout</span><span class="pi">:</span> <span class="s">dark-post</span></code></pre></figure>
+<h3>更小的通常更好</h3>
 
-<p>on your post. This theme adds a dark background with a white panel to show your content.</p>
+<p>一般情况下，应尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘、内存和CPU缓存，并处理时需要的CPU周期也更少。</p>
 
+<p>但要确保没有低估需要存储的值的范围，因为当schema中数据量增大后，再对数据类型范围进行更改会非常耗时。</p>
+
+<h3>简单就好</h3>
+
+<p>简单数据类型的操作通常需要更少的CPU周期。例如，应使用MySQL内建类型而不是字符串来存储日期和时间；应使用整型存储IP地址。</p>
+
+<h3>尽量避免NULL</h3>
+
+<p>通常情况下最好指定列为NOT NULL，除非真的需要存储NULL值。因为当列中存在NULL的话，会使索引、索引统计和值比较变得更复杂。同时，可为NULL的列会使用更多的存储空间，当值为NULL的列被索引时，每个索引记录需要一个额外字节，甚至再MyISAM中将会导致固定大小的索引变为可变大小的索引。</p>
+
+<p>通常在建立索引的时候，应该避免可为NULL的列。但在后期调优的过程中，将NULL的列改为NOT NULL所带来的性能提升比较小，因此在此阶段没有必要首先将所有schema中所有的NULL列转换过来，除非确定这是问题所在。</p>
+
+
+        <div align="center">
+            <div markdown="0"><a href="/intro/optimize-mysql/" class="btn btn-info">Continue Reading ...</a></div>
+        </div>
     
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
@@ -300,159 +365,37 @@
   <header>
     
     <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-10-26T00:00:00+00:00"><a href="/image/background-image/">October 26, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
+      <span class="entry-date date published updated"><time datetime="2016-03-18T00:00:00+08:00"><a href="/intro/PHP7-new-detail/">March 18, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
       
       <span class="entry-reading-time">
         <i class="fa fa-clock-o"></i>
         
-        Reading time ~1 minute
+        Reading time ~2 minutes
       </span><!-- /.entry-reading-time -->
       
     </div><!-- /.entry-meta -->
     
-      <h1 class="entry-title"><a href="/image/background-image/" rel="bookmark" title="Post with a Background Image" itemprop="url">Post with a Background Image</a></h1>
+      <h1 class="entry-title"><a href="/intro/PHP7-new-detail/" rel="bookmark" title="PHP7新特性总结" itemprop="url">PHP7新特性总结</a></h1>
     
   </header>
   <div class="entry-content">
     
-      <p>Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.</p>
+        <figure class="center">
+    <a href="#"><img src="/images/php-7-1.jpg" alt=""></a>
+</figure>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">image</span><span class="pi">:</span>
-  <span class="s">background</span><span class="pi">:</span> <span class="s">filename.png</span></code></pre></figure>
+<p>PHP7版本相较于老版本，加了大量新特性，同时性能得到了显著提升：是PHP5.6性能的2倍，在wordpress表
+现上超过了HHVM。下面来总结下PHP7新增的特性。</p>
 
-<p>This little bit of YAML makes the assumption that your background image asset is in the <code>/images</code> folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.</p>
 
-<p>If you want to set a background image for the entire site just add <code>background: filename.png</code> to your <code>_config.yml</code> and BOOM — background images on every page!</p>
-
-<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
-
-    
-  </div><!-- /.entry-content -->
-</article><!-- /.hentry -->
-
-<article class="hentry">
-  <header>
-    
-    <div class="entry-meta">
-      <span class="entry-date date published updated"><time datetime="2013-08-16T00:00:00+00:00"><a href="/intro/code-highlighting-post/">August 16, 2013</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About 邵洪泉">邵洪泉</a></span></span>
-      
-      <span class="entry-reading-time">
-        <i class="fa fa-clock-o"></i>
-        
-        Reading time ~1 minute
-      </span><!-- /.entry-reading-time -->
-      
-    </div><!-- /.entry-meta -->
-    
-      <h1 class="entry-title"><a href="/intro/code-highlighting-post/" rel="bookmark" title="Syntax Highlighting Post" itemprop="url">Syntax Highlighting Post</a></h1>
-    
-  </header>
-  <div class="entry-content">
-    
-      <p>Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
-
-<h3 id="rouge-code-blocks">Rouge Code Blocks</h3>
-
-<p>To modify styling and highlight colors edit <code>/_sass/_rouge.scss</code>.</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#container</span> <span class="p">{</span>
-    <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"pagination"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
-    {% if page.previous %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.baseurl }}{{ page.previous.url }}"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"{{ page.previous.title }}"</span><span class="nt">&gt;</span>Previous article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-    {% if page.next %}
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ site.baseurl }}{{ page.next.url }}"</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">title=</span><span class="s">"{{ page.next.title }}"</span><span class="nt">&gt;</span>Next article<span class="nt">&lt;/a&gt;</span>
-    {% endif %}
-<span class="nt">&lt;/nav&gt;</span><span class="c">&lt;!-- /.pagination --&gt;</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">Jekyll</span>
-  <span class="k">class</span> <span class="nc">TagIndex</span> <span class="o">&lt;</span> <span class="no">Page</span>
-    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">site</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">dir</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-      <span class="vi">@site</span> <span class="o">=</span> <span class="n">site</span>
-      <span class="vi">@base</span> <span class="o">=</span> <span class="n">base</span>
-      <span class="vi">@dir</span> <span class="o">=</span> <span class="n">dir</span>
-      <span class="vi">@name</span> <span class="o">=</span> <span class="s1">'index.html'</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">process</span><span class="p">(</span><span class="vi">@name</span><span class="p">)</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">read_yaml</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">'_layouts'</span><span class="p">),</span> <span class="s1">'tag_index.html'</span><span class="p">)</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'tag'</span><span class="p">]</span> <span class="o">=</span> <span class="n">tag</span>
-      <span class="n">tag_title_prefix</span> <span class="o">=</span> <span class="n">site</span><span class="p">.</span><span class="nf">config</span><span class="p">[</span><span class="s1">'tag_title_prefix'</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'Tagged: '</span>
-      <span class="n">tag_title_suffix</span> <span class="o">=</span> <span class="n">site</span><span class="p">.</span><span class="nf">config</span><span class="p">[</span><span class="s1">'tag_title_suffix'</span><span class="p">]</span> <span class="o">||</span> <span class="s1">'&amp;#8211;'</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"</span><span class="si">#{</span><span class="n">tag_title_prefix</span><span class="si">}#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">"</span>
-      <span class="nb">self</span><span class="p">.</span><span class="nf">data</span><span class="p">[</span><span class="s1">'description'</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"An archive of posts tagged </span><span class="si">#{</span><span class="n">tag</span><span class="si">}</span><span class="s2">."</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></figure>
-
-<h3 id="standard-code-block">Standard Code Block</h3>
-
-<pre><code>&lt;nav class="pagination" role="navigation"&gt;
-    {% if page.previous %}
-        &lt;a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}"&gt;Previous article&lt;/a&gt;
-    {% endif %}
-    {% if page.next %}
-        &lt;a href="{{ site.baseurl }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}"&gt;Next article&lt;/a&gt;
-    {% endif %}
-&lt;/nav&gt;&lt;!-- /.pagination --&gt;
-</code></pre>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p><a href="http://en.wikipedia.org/wiki/Syntax_highlighting">http://en.wikipedia.org/wiki/Syntax_highlighting</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
+        <div align="center">
+            <div markdown="0"><a href="/intro/PHP7-new-detail/" class="btn btn-info">Continue Reading ...</a></div>
+        </div>
     
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
 
 
-
-<div class="pagination">
-  <ul class="inline-list">
-    
-    
-
-    
-    
-      <li><strong class="current-page">1</strong></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page2/">2</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="/page3/">3</a></li>
-    
-
-    
-    
-      <li><a href="/page2/" class="btn">Next</a></li>
-    
-  </ul>
-</div>
 
 
 </div><!-- /#main -->
@@ -476,7 +419,7 @@
 
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    <span>&copy; 2016 邵洪泉. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/aron-bordin/neo-hpstr-jekyll-theme" rel="nofollow">Neo-HPSTR Theme</a>.</span>
+    <span>&copy; 2017 邵洪泉. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/aron-bordin/neo-hpstr-jekyll-theme" rel="nofollow">Neo-HPSTR Theme</a>.</span>
 
   </footer>
 </div><!-- /.footer-wrapper -->

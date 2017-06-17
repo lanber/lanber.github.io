@@ -1,0 +1,338 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>MySQL存储优化 &#8211; 邵洪泉的博客</title>
+<meta name="description" content="MySQL数据表优化方法，MySQL如何优化数据表，MySQL怎么优化数据表，如何对MySQL进行数据表优化，MySQL优化数据表方式">
+<meta name="keywords" content="mysql">
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL存储优化">
+<meta property="og:description" content="MySQL数据表优化方法，MySQL如何优化数据表，MySQL怎么优化数据表，如何对MySQL进行数据表优化，MySQL优化数据表方式">
+<meta property="og:url" content="/intro/optimize-mysql/">
+<meta property="og:site_name" content="邵洪泉的博客">
+<meta property="og:image" content="/images/images/logo.png">
+
+
+
+
+
+<link rel="canonical" href="/intro/optimize-mysql/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="邵洪泉的博客 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="/assets/css/jquery.floating-social-share.min.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script type="text/javascript" src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+			var flag = 250;
+		
+		$(window).scroll(function(){
+			var a=$(".header-menu"),b=$(window).scrollTop();
+			b>flag?a.attr("class","header-menu header-menu-overflow"):a.attr("class","header-menu header-menu-top");
+		})
+	})
+</script>
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+
+<div class="header-menu header-menu-top">
+    <ul class="header-item-container">
+      <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
+      <li class="header-item-title">
+        <a href="/">
+          
+            <img class="logo" src="/images/logo.png" alt="邵洪泉的博客">
+          
+          <a href="/" class="title"> 邵洪泉的博客</a>
+        </a>
+      </li>
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/about"><h3>关于我</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="https://lanber.github.io/blog/tags/"><h3>分类</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/"><h3>首页</h3></a></li>
+            
+        
+      
+    </ul>
+  </div>
+<div class="entry-header" id="header">
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>MySQL存储优化</h1>
+      
+        <h2><span class="entry-date date published updated"><time datetime="2016-10-13T00:00:00+08:00">October 13, 2016</time></span></h2>
+      
+
+      
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~1 minute
+        </p><!-- /.entry-reading-time -->
+      
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
+
+
+<nav id="menu" style="display: none">
+  <ul>
+    
+      
+        <li><a href="/"><h3>首页</h3></a></li>
+      
+    
+      
+        <li><a href="https://lanber.github.io/blog/tags/"><h3>分类</h3></a></li>
+      
+    
+      
+        <li><a href="/about"><h3>关于我</h3></a></li>
+      
+    
+  </ul>
+</nav>
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <div class="entry-content">
+        
+      <h1 class="post-title entry-title">MySQL存储优化</h1>
+      <h2>选择优化的数据类型</h2>
+
+<h3>更小的通常更好</h3>
+
+<p>一般情况下，应尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘、内存和CPU缓存，并处理时需要的CPU周期也更少。</p>
+
+<p>但要确保没有低估需要存储的值的范围，因为当schema中数据量增大后，再对数据类型范围进行更改会非常耗时。</p>
+
+<h3>简单就好</h3>
+
+<p>简单数据类型的操作通常需要更少的CPU周期。例如，应使用MySQL内建类型而不是字符串来存储日期和时间；应使用整型存储IP地址。</p>
+
+<h3>尽量避免NULL</h3>
+
+<p>通常情况下最好指定列为NOT NULL，除非真的需要存储NULL值。因为当列中存在NULL的话，会使索引、索引统计和值比较变得更复杂。同时，可为NULL的列会使用更多的存储空间，当值为NULL的列被索引时，每个索引记录需要一个额外字节，甚至再MyISAM中将会导致固定大小的索引变为可变大小的索引。</p>
+
+<p>通常在建立索引的时候，应该避免可为NULL的列。但在后期调优的过程中，将NULL的列改为NOT NULL所带来的性能提升比较小，因此在此阶段没有必要首先将所有schema中所有的NULL列转换过来，除非确定这是问题所在。</p>
+
+<!-- more -->
+
+<h3>针对具体数据类型</h3>
+
+<p>1、为整型类型指定宽度，例如INT(11)，只是用来在一些界面工具上显示字符的个数，对于存储与计算来说，INT(1)和INT(20)是一样的。此外，把整型类型作为选择标识符是最好的选择。</p>
+
+<p>2、浮点和DECIMAL类型都可以指定精度，对于DECIMAL，指定小数点前后最大位数会影响列的空间消耗。而且当制定精度后，MySQL会瞧瞧选择不同的数据类型，或在存储是对值进行取舍。因此建议至指定数据类型，不指定精度。</p>
+
+<p>3、当数据量大时，建议使用BIGINT代替DECIMAL。（在存储时乘以倍数化为整数，而后在处理时除以倍数以获取精确值。）</p>
+
+<p>4、VARCHAR类型用于储存可变长字符串，比定长类型更节省空间。由于行时变长的，在UPDATE时可能使行变得比原来更长，这就会导致需要做额外工作。因此varchar的使用环境为：字符串列的最大长度比平均长度大很多；列的更新很少；使用了向UTF-8这样复杂的字符集。</p>
+
+<p>CHAR类型是定长的，因此是和存储很短的字符串，或所有值都接近同一个长度。</p>
+
+<p>5、ENUM类型在存储时会非常紧凑，尽量使用ENUM类型代替字符串；而且把列转换成ENUM后，关联会加快。但该类型字符串列表是固定的，添加或删除字符串必须使用ALTER TABLE，不要储存容易变动的字符串；同时储存和排序数据实际是化为整数操作，而不是字符串，当使用数字作为ENUM枚举常量时，容易导致混乱。</p>
+
+<p>6、建议使用TIMESTAMP，因为它比DATETIME空间效率更高，用整型类型存储时间戳不会带来任何收益，而且处理时间格式时间不方便。需要注意，TIMEStAMP显示的值以来时区，而DATETIME则不会。</p>
+
+<p>7、应谨避免使用BIT类型，可用CHAR代替存储true/false值。SET类型较方便查询，因为MySQL列入FIND_INSET()和FIELD()函数，但改变列的定义代价很高。</p>
+
+<h3>MySQL schema设计中的陷阱</h3>
+
+<p>1、太多的列</p>
+
+<p>2、太多的关联</p>
+
+<p>3、太过依赖枚举</p>
+
+<p>4、尽量避免使用NULL并不代表不能使用NULL，有时使用NULL会比-1的效率更高。</p>
+
+<h3>范式和反范式</h3>
+
+<p>1、范式的优点和缺点</p>
+
+<p>优点：</p>
+
+<p>-范式化的更新操作通常比反范式化要快。</p>
+
+<p>-几乎不存在重复数据，因此便于修改数据。</p>
+
+<p>-范式化的表通常很小，可更好的放在内存里，因此执行操作会更快。</p>
+
+<p>-更少的使用DISTINCT或GROUP BY。</p>
+
+<p>缺点：-通常一次或多次需要关联，不但代价昂贵，还可能使索引策略无效。</p>
+
+<p>2、反范式的优点和缺点</p>
+
+<p>优点：-可很好的避免关联，当数据比内存大时，避免了随机I/O,会比关联快得多。</p>
+
+<p>缺点：-参考范式的优点。</p>
+
+<p>3、通常情况下，采用范式化和反范式化混合使用的方式建立高效schema。</p>
+
+<h3>缓存表和汇总表</h3>
+
+<p>在忽略复杂、实时更新的情况下，提升性能的最好方法是在同一张表中保存衍生的冗余数据。将较简单的从schema获取的数据存储在“缓存表”，将需使用GROUP BY语句聚合查询的数据存在“汇总表”。</p>
+
+<p>如果需要在表中保存计数器，可单独创建一张“计数器表”。</p>
+
+<h3>加快ALTER TABLE操作的速度</h3>
+
+<p>某些操作不需要重建表：</p>
+
+<p>-移除（不是增加）一个列的AUTO_INCREMENT属性</p>
+
+<p>-增加、移除，或更改ENUM和SET常量。</p>
+
+<p>1、修改.frm文件</p>
+
+<p>-创建一张相同结构的空表(like)，并进行修改。</p>
+
+<p>-执行FLUSH TABLES WITH READ LOCK。</p>
+
+<p>-交换.frm文件。</p>
+
+<p>-执行UNLOCK TABLES。</p>
+
+<p>2、快速创建MyISAM索引
+先禁用索引(必须为非唯一索引)，载入数据，然后重启索引。</p>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags#mysql" title="Pages tagged mysql" class="tag"><span class="term">mysql</span></a></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2016-10-13">October 13, 2016</time></span></span>
+        
+        <!-- <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div> --><!-- /.social-share -->
+
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="/intro/PHP7-new-detail/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/Build-blog/" title="Build Blog">Build Blog</a></h3>
+      <p># Build Blog## 换电脑要重新搭建环境，就过程中遇到的坑做个总结## >更新gem源- `gem sources --add http://gems.ruby-china.org/ --remove https://rubygems.org/`### warni...&hellip; <a href="/Build-blog/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/intro/optimize-mysql-query/" title="MySQL查询优化">MySQL查询优化</a></h4>
+        <span>Published on November 26, 2016</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/intro/optimize-mysql-index/" title="MySQL索引优化">MySQL索引优化</a></h4>
+        <span>Published on October 14, 2016</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
+<script type="text/javascript" async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<!-- <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    // sharing();
+</script>
+
+
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2017 邵洪泉. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/aron-bordin/neo-hpstr-jekyll-theme" rel="nofollow">Neo-HPSTR Theme</a>.</span>
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+</body>
+</html>

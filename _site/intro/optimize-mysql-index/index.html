@@ -1,0 +1,383 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>MySQL索引优化 &#8211; 邵洪泉的博客</title>
+<meta name="description" content="MySQL索引优化方法，MySQL如何优化索引，MySQL怎么优化索引，如何对MySQL进行索引优化，MySQL优化索引方式">
+<meta name="keywords" content="mysql">
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL索引优化">
+<meta property="og:description" content="MySQL索引优化方法，MySQL如何优化索引，MySQL怎么优化索引，如何对MySQL进行索引优化，MySQL优化索引方式">
+<meta property="og:url" content="/intro/optimize-mysql-index/">
+<meta property="og:site_name" content="邵洪泉的博客">
+<meta property="og:image" content="/images/images/logo.png">
+
+
+
+
+
+<link rel="canonical" href="/intro/optimize-mysql-index/">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="邵洪泉的博客 Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="/assets/css/jquery.floating-social-share.min.css">
+<!-- Webfonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script type="text/javascript" src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+			var flag = 250;
+		
+		$(window).scroll(function(){
+			var a=$(".header-menu"),b=$(window).scrollTop();
+			b>flag?a.attr("class","header-menu header-menu-overflow"):a.attr("class","header-menu header-menu-top");
+		})
+	})
+</script>
+
+</head>
+
+<body id="post" >
+
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
+
+
+<div class="header-menu header-menu-top">
+    <ul class="header-item-container">
+      <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
+      <li class="header-item-title">
+        <a href="/">
+          
+            <img class="logo" src="/images/logo.png" alt="邵洪泉的博客">
+          
+          <a href="/" class="title"> 邵洪泉的博客</a>
+        </a>
+      </li>
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/about"><h3>关于我</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="https://lanber.github.io/blog/tags/"><h3>分类</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/"><h3>首页</h3></a></li>
+            
+        
+      
+    </ul>
+  </div>
+<div class="entry-header" id="header">
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>MySQL索引优化</h1>
+      
+        <h2><span class="entry-date date published updated"><time datetime="2016-10-14T00:00:00+08:00">October 14, 2016</time></span></h2>
+      
+
+      
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~1 minute
+        </p><!-- /.entry-reading-time -->
+      
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
+
+
+<nav id="menu" style="display: none">
+  <ul>
+    
+      
+        <li><a href="/"><h3>首页</h3></a></li>
+      
+    
+      
+        <li><a href="https://lanber.github.io/blog/tags/"><h3>分类</h3></a></li>
+      
+    
+      
+        <li><a href="/about"><h3>关于我</h3></a></li>
+      
+    
+  </ul>
+</nav>
+
+
+
+
+<div id="main" role="main">
+  <article class="hentry">
+    <div class="entry-content">
+        
+      <h1 class="post-title entry-title">MySQL索引优化</h1>
+      <h2>一、索引的类型</h2>
+
+<h3>B-Tree索引</h3>
+
+<h4>优点：</h4>
+
+<p>-顺序存储，且每一个叶子页到跟的距离相同。</p>
+
+<p>-不在需要全表扫描，取而代之的是从索引的根节点开始进行搜索，加快了访问数据的速度。</p>
+
+<h3>缺点:</h3>
+
+<p>-如果不是按照索引的最左列开始查找，则无法使用索引。</p>
+
+<p>-无法查找同时满足条件的多列。</p>
+
+<p>-如果查询中存在某列的范围查询(例如like)，则其右边所有列均无法使用索引优化查找。</p>
+
+<!-- more -->
+
+<h3>哈希索引</h3>
+
+<h4>优点:</h4>
+
+<p>-基于哈希表实现，只有精确匹配索引所有列的查询才有效。</p>
+
+<p>-因只需存储对应的哈希值，因此索引结构非常紧凑，从而加快搜索速度。</p>
+
+<h4>缺点：</h4>
+
+<p>-哈希索引只包含哈希值喝行指针，而不存储字段值，但访问内容中的行的速度很快，所以影响不大。</p>
+
+<p>-哈希索引不是按照索引值的顺序存储的，因此无法用于排序。</p>
+
+<p>-因哈希索引需使用列中全部内容来计算哈希值，哈希索引不支持部分索引匹配查找。若在数据列(A,B)上建立哈希索引，若只查询数据列A则无法使用索引。</p>
+
+<p>-哈希索引也不支持范围查询，只支持等值比较。</p>
+
+<p>-当出现冲突时，存储引擎不许遍历链表中所有行指针，如果出现大量冲突，则会影响查询速度，同时维护代价也会加大。</p>
+
+<h3>空间数据索引（R-Tree）</h3>
+
+<h4>优点：</h4>
+
+<p>-可用作地理数据存储。</p>
+
+<p>-与B-Tree不同，此类索引无需前缀查询。</p>
+
+<h4>缺点：</h4>
+
+<p>-必须使用GIS相关函数进行维护，相较于PostgreSQL而言，MySQL的GIS支持不完善。</p>
+
+<h3>全文索引</h3>
+
+<p>-全文索引是一种特殊类型的索引，她查找的是文本中的关键词，而不是直接比较索引中的值。</p>
+
+<p>-需注意停用词、词干和负数、布尔搜索等。</p>
+
+<h2>二、索引的优点</h2>
+
+<p>-索引大大减少了服务器需要扫描的数据量。</p>
+
+<p>-索引可以帮助服务器避免排序和临时表。</p>
+
+<p>-索引可以将随机I/O变为顺序I/O。</p>
+
+<p>（索引在中到大型表中很有效。对于非常小的表，通常扫描全表效率更高；而对于特大型表，使用分区技术更加高效。）</p>
+
+<h2>三、高性能索引策略</h2>
+
+<p>-独立的列。索引列不能使表达式的一部分，也不能是函数的参数。</p>
+
+<p>-前缀索引和索引选择性。可以索引开始部分的字符，提高索引效率，但也会降低索引的选择性。索引选择性指的是不重复记录（技术）与数据表记录总数的比值，1为最好,sql语句表示为</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">SELECT</span> <span class="no">COUNT</span><span class="p">(</span><span class="no">DISTINCT</span> <span class="no">LEFT</span><span class="p">(</span><span class="n">columnname</span><span class="p">,</span><span class="err">前缀数字符数</span><span class="p">))</span><span class="o">/</span><span class="no">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="no">FROM</span> <span class="n">tablename</span><span class="p">;</span></code></pre></figure>
+
+<p>建立索引的语句为</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">ALTER</span> <span class="no">TABLE</span> <span class="n">tablename</span> <span class="no">ADD</span> <span class="no">KEY</span><span class="p">(</span><span class="n">columnname</span><span class="p">(</span><span class="err">前缀字符数</span><span class="p">));</span></code></pre></figure>
+
+<p>-使用多列索引。一个常见的错误就是，为每个列创建独立的索引，从而触发MySQL的索引合并策略。但索引合并策略在某些时候会很糟糕：</p>
+
+<p>1、当出现服务器对多个索引做AND操作时，意味着需要包含所有AND条件的多列索引，而不是多个单列索引。</p>
+
+<p>2、当出现服务器对多个索引做OR操作时，通常需要消耗大量CPU和内存资源在算法的缓存、排序和合并操作上。有时实在索引选择性不高的情况下，须合并大量数据。</p>
+
+<p>3、查询优化器不会把这些计算在查询成本(cost)中，会导致查询成本被低估。</p>
+
+<p>-选择合适的索引列顺序。当不需要考虑排序和分组时，将选择性最高的列放在前面通常是很好的。经验法则和推论在多数情况是有用的，但注意不要急啊是平均情况下的性能也能代表特殊情况下的性能，特殊情况可能会摧毁整个应用的性能。</p>
+
+<p>-聚簇索引。InnoDB的聚簇索引为在同一个结构中保存了B-Tree索引和数据行。</p>
+
+<p>优点：</p>
+
+<p>1、可把相关数据保存在一起。</p>
+
+<p>2、加快访问速度。</p>
+
+<p>3、使用覆盖索引扫描的查询可以直接使用页节点中的主键值。</p>
+
+<p>缺点：</p>
+
+<p>1、若数据量足够全部放在内存中，则聚簇索引优势就会不明显。</p>
+
+<p>2、插入速度严重依赖于插入顺序。若不是按主键顺序加载数据，则在加载完成后最好使用OPTIMIZE TABLE重新组织一下表。</p>
+
+<p>3、更新代价高。</p>
+
+<p>4、插入新行或主键更新导致需要移动行时，可能面临“页分裂(page split)”情况。</p>
+
+<p>5、聚簇索引可能导致全表扫描变慢，尤其是行比较稀疏或由于页分裂导致数据存储不联系。</p>
+
+<p>6、二级索引可能比想象的大，因为二级索引的叶子结点包含了引用行的主键列</p>
+
+<p>7、二级索引访问需要两次索引查找。二级索引叶子节点保存的不是指向行的物理位置指针，而是行的主键值。</p>
+
+<p>-覆盖索引。如果一个索引包含所有需要查询的字段的值，则成为“覆盖索引”。由于其他索引都不存储索引列的值，因此MySQL只能使用B-Tree索引做覆盖索引。</p>
+
+<p>优点：</p>
+
+<p>1、索引条目通常远小于数据行的大小，所以如果只需要读取索引，那MySQL就会极大地减少数据访问量。</p>
+
+<p>2、因为索引时按照列值顺序存储的，所以对于I/O密集型的范围查询会比随机从磁盘读取每一行数据的I/O要少得多。</p>
+
+<p>3、一些存储引擎在内存中只缓存索引，数据则依赖于操作系统来缓存，因此要访问数据就会需要一次系统调用。</p>
+
+<p>4、InnoDB的二级索引需要两次索引查找，如果二级主键能够覆盖查询，则可以避免对主键索引的二次查询。</p>
+
+<p>-使用索引扫描来做排序，如果索引不能覆盖查询所需的全部列，则会每扫描一条索引记录就会回表查询一次对应的行，导致速度变慢。，设计索引时，应尽可能满足排序和查找行的要求。只有当索引的列顺序和order by子句的顺序完全一致，并且所有列的排序方向一样，才能使用索引来对结果排序。</p>
+
+<p>-压缩（前缀压缩）索引，在MyISAM中可使用PACK_KEYS来控制索引压缩方式。</p>
+
+<p>-冗余和重复索引会影响性能。因为MySQL需要单独维护重复的索引，并且优化器在优化查询的时候也需要逐个地进行考虑。</p>
+
+<p>-未使用的索引将会是累赘，建议删除。但注意哪些用来唯一约束的索引。</p>
+
+<h2>总结</h2>
+
+<p>1、单行访问是很慢的。</p>
+
+<p>2、按顺序访问范围数据是很快的。</p>
+
+<p>3、索引覆盖查询是很快的。</p>
+
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags#mysql" title="Pages tagged mysql" class="tag"><span class="term">mysql</span></a></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2016-10-14">October 14, 2016</time></span></span>
+        
+        <!-- <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+    <li class="facebook"><a href="" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div> --><!-- /.social-share -->
+
+      </footer>
+    </div><!-- /.entry-content -->
+    
+    <div class="read-more">
+  
+    <div class="read-more-header">
+      <a href="/intro/optimize-mysql/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/Build-blog/" title="Build Blog">Build Blog</a></h3>
+      <p># Build Blog## 换电脑要重新搭建环境，就过程中遇到的坑做个总结## >更新gem源- `gem sources --add http://gems.ruby-china.org/ --remove https://rubygems.org/`### warni...&hellip; <a href="/Build-blog/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/intro/optimize-mysql-query/" title="MySQL查询优化">MySQL查询优化</a></h4>
+        <span>Published on November 26, 2016</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/intro/optimize-mysql/" title="MySQL存储优化">MySQL存储优化</a></h4>
+        <span>Published on October 13, 2016</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
+</div><!-- /#main -->
+
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
+<script type="text/javascript" async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<!-- <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> -->
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    // sharing();
+</script>
+
+
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2017 邵洪泉. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="https://github.com/aron-bordin/neo-hpstr-jekyll-theme" rel="nofollow">Neo-HPSTR Theme</a>.</span>
+
+  </footer>
+</div><!-- /.footer-wrapper -->
+
+</body>
+</html>
