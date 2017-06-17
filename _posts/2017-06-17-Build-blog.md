@@ -3,7 +3,7 @@ layout: post
 title: Build Blog
 description: "jekyll博客搭建"
 modified: 2017-06-17
-tags: [php]
+tags: [其他]
 categories: [intro]
 ---
 ## 换电脑要重新搭建环境，就过程中遇到的坑做个总结
