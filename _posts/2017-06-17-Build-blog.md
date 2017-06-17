@@ -24,10 +24,10 @@ categories: [intro]
 core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)
 
 ```
-## 安装依赖
+## >安装依赖
 - `bundle install`
 
-## 启动jekyll
+## >启动jekyll
 - `bundle exec jekyll server`
 
 

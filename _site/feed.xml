@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2017-06-17T18:34:13+08:00</updated>
+<updated>2017-06-17T18:37:42+08:00</updated>
 <id>/</id>
 <author>
   <name>邵洪泉</name>
@@ -48,13 +48,13 @@
 core_ext/kernel_require.rb:55:in `require': cannot load such file -- bundler (LoadError)
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;安装依赖&lt;/h2&gt;
+&lt;h2&gt;&amp;gt;安装依赖&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;启动jekyll&lt;/h2&gt;
+&lt;h2&gt;&amp;gt;启动jekyll&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;bundle exec jekyll server&lt;/code&gt;&lt;/li&gt;
